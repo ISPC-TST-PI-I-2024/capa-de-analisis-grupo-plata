@@ -30,7 +30,7 @@
 
 ## **Proyecto ABP#23: Sistema de Alerta de Calidad del Aire**  
 
-## **Capa de Análisis**
+## **Capa de Analisis**
 
 ---
 
