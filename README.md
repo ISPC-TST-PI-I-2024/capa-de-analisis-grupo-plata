@@ -2,19 +2,35 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=15324281&assignment_repo_type=AssignmentRepo)
 # Proyecto IoT: API RESTful
 
-## Carátula del ISPC
+![caratula_ISPC](./E%20assets/logoISPC.png)
 
 ---
 
-## Datos del Docente y de la Materia
+## - **Institución**: Instituto Superior Politécnico Córdoba (ISPC)  
+
+## - **Curso**: Proyecto Integrador I  
+
+## - **Docente**: Cristian Gonzalo Vera  
 
 ---
 
-## Datos del Grupo de Trabajo y sus Integrantes
+## - **Equipo de Desarrollo [Grupo Plata]**:
+- karina jazmin barbero, GitHub: [@karina-lolis](https://github.com/karina-lolis).
+- Nicolás Nahuel Barrionuevo, GitHub: [@NicolasBa27](https://github.com/NicolasBa27).
+- Macarena Aylen Carballo, GitHub: [@MacarenaAC](https://github.com/MacarenaAC).
+- Diego Ares, GitHub: [@diegote7](https://github.com/diegote7).
+- Miqueas Drovetta, GitHub: [@aMiqueasDrovetta](https://github.com/MiqueasDrovetta).
+- Fernando Gimenez Coria, GitHub: [@FernandoGC](https://github.com/FerCbr). 
+- Agutin Leal Segura, GitHub: [@agustinlealsegura](https://github.com/agustinlealsegura).
+- Raul Jara, GitHub: [@r-j28](https://github.com/r-j28).
 
 ---
 
-## Datos del Proyecto
+**Datos del Proyecto:**  
+
+## **Proyecto ABP#23: Sistema de Alerta de Calidad del Aire**  
+
+## **Capa de Análisis**
 
 ---
 

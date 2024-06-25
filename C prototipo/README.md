@@ -50,54 +50,139 @@ La API proporciona los siguientes endpoints:
        },
        ...
      ]
+     ```  
+
+2. **Obtener Usuario**
+   - **Método**: `GET`
+   - **URL**: `/usuarios/<int:id>`
+   - **Descripción**: Devuelve una lista con los datos del usuario registrado con un id específico.
+   - **Respuesta**:
+     ```json
+     [
+       {
+         "id": 1,
+         "nombre": "Juan Perez",
+         "email": "juan.perez@example.com"
+       },
+     ]
      ```
 
-2. **Crear Usuario**
-   - **Método**: `POST`
-   - **URL**: `/usuarios/`
-   - **Descripción**: Crea un nuevo usuario en la base de datos.
-   - **Cuerpo de la Solicitud**:
-     ```json
-     {
-       "nombre": "Juan Perez",
-       "email": "juan.perez@example.com",
-       "password": "password123"
-     }
-     ```
-   - **Respuesta**: Código de estado `201 Created` si se crea con éxito.
+3. **Crear Usuario**
+    - **Método**: `POST`
+    - **URL**: `/usuarios/`
+    - **Descripción**: Crea un nuevo usuario en la base de datos.
+    - **Cuerpo de la Solicitud**:
+      ```json
+      {
+        "nombre": "Juan Perez",
+        "email": "juan.perez@example.com",
+        "rol": "admin", 
+        "password": "password123"
+      }
+      ```
+    - **Respuesta**: Código de estado `201 Created` si se crea con éxito.
+
+4. **Actualizar usuario**
+    - **Método**: `PUT`
+    - **URL**: `/usuarios/<int:id>`
+    - **Descripción**: Actualiza un usuario existente en la base de datos.
+    - **Cuerpo de la Solicitud**:
+    ```json
+      {
+        "nombre": "Juan Alberto Perez",
+        "email": "juan.a.perez@example.com",
+        "rol": "user", 
+        "password": "password987"
+      }
+      ```
+    - **Respuesta**: Código de estado `204 No Content` si se crea con éxito.
+
+5. **Borrar usuario**
+    - **Método**: `DELETE`
+    - **URL**: `/usuarios/<int:id>`
+    - **Descripción**: Elimina un usuario existente en la base de datos.
+    - **Cuerpo de la Solicitud**:
+
+    - **Respuesta**: Código de estado `204 No Content` si se elimina el usuario con éxito.
 
 #### Dispositivos
 
 1. **Obtener Dispositivos**
    - **Método**: `GET`
    - **URL**: `/dispositivos/`
-   - **Descripción**: Devuelve una lista de todos los dispositivos registrados.
+   - **Descripción**: Devuelve una lista de todos los dispositivos registrados en la base de datos.
    - **Respuesta**:
      ```json
      [
        {
          "id": 1,
-         "nombre": "Sensor de temperatura",
-         "tipo": "Sensor",
-         "ubicacion": "Sala de servidores"
+         "nombre": "Estation_1",
+         "tipo": "Nodo medicion calidad aire",
+         "ubicacion": "31°26'46.9\"S 64°10'28.8\"W",
+         "id_usuario": "3"
        },
        ...
      ]
+     ```  
+
+2. **Obtener Dispositivo**
+   - **Método**: `GET`
+   - **URL**: `/dispositivos/<int:id>`
+   - **Descripción**: Devuelve una lista con los datos del dispositivo registrado con un id específico.
+   - **Respuesta**:
+     ```json
+     [
+       {
+          "id": 1,
+         "nombre": "Estation_1",
+         "tipo": "Nodo medicion calidad aire",
+         "ubicacion": "31°26'46.9\"S 64°10'28.8\"W",
+         "id_usuario": "3"
+       },
+     ]
      ```
 
-2. **Crear Dispositivo**
-   - **Método**: `POST`
-   - **URL**: `/dispositivos/`
-   - **Descripción**: Registra un nuevo dispositivo en la base de datos.
-   - **Cuerpo de la Solicitud**:
-     ```json
-     {
-       "nombre": "Sensor de temperatura",
-       "tipo": "Sensor",
-       "ubicacion": "Sala de servidores"
-     }
-     ```
-   - **Respuesta**: Código de estado `201 Created` si se crea con éxito.
+3. **Crear Dispositivo**
+    - **Método**: `POST`
+    - **URL**: `/dispositivos/`
+    - **Descripción**: Crea un nuevo dispositivo en la base de datos.
+    - **Cuerpo de la Solicitud**:
+      ```json
+      [
+        {
+          "nombre": "Estation_2",
+          "tipo": "Nodo medicion viento",
+          "ubicacion": "31°26'46.9\"S 64°10'28.8\"W",
+          "id_usuario": "2"
+        },
+      ]
+      ```
+    - **Respuesta**: Código de estado `201 Created` si se crea con éxito.
+
+4. **Actualizar Dispositivo**
+    - **Método**: `PUT`
+    - **URL**: `/dispositivos/<int:id>`
+    - **Descripción**: Actualiza un dispositivo existente en la base de datos.
+    - **Cuerpo de la Solicitud**:
+    ```json
+      
+      {
+        "nombre": "Estation_2",
+        "tipo": "Nodo medicion viento y calidad de aire",
+        "ubicacion": "31°26'46.9\"S 64°10'28.8\"W",
+        "id_usuario": "2"
+      },
+      
+      ```
+    - **Respuesta**: Código de estado `204 No Content` si se crea con éxito.
+
+5. **Borrar Dispositivo**
+    - **Método**: `DELETE`
+    - **URL**: `/dispositivos/<int:id>`
+    - **Descripción**: Elimina un dispositivo existente en la base de datos.
+    - **Cuerpo de la Solicitud**:
+
+    - **Respuesta**: Código de estado `204 No Content` si se elimina el usuario con éxito.
 
 #### Datos de Dispositivos
 
@@ -111,15 +196,32 @@ La API proporciona los siguientes endpoints:
        {
          "id": 1,
          "dispositivo_id": 1,
+         "timestamp": "2024-06-24T00:00:00Z",
          "valor": 23.5,
-         "unidad": "C",
-         "timestamp": "2024-06-24T00:00:00Z"
+         "unidad": "C"
        },
        ...
      ]
      ```
 
-2. **Enviar Datos de Dispositivo**
+2. **Obtener Dato de Dispositivo**
+   - **Método**: `GET`
+   - **URL**: `/datos_dispositivos/<int:id>`
+   - **Descripción**: Devuelve una lista con los datos registrados para un dispositivo específico.
+   - **Respuesta**:
+     ```json
+     [
+       {
+         "id": 1,
+         "dispositivo_id": 1,
+         "timestamp": "2024-06-24T00:00:00Z",
+         "valor": 23.5,
+         "unidad": "C"
+       },
+     ]
+     ```
+
+3. **Enviar Datos de Dispositivo**
    - **Método**: `POST`
    - **URL**: `/datos_dispositivos/`
    - **Descripción**: Envia nuevos datos para un dispositivo.
@@ -131,7 +233,31 @@ La API proporciona los siguientes endpoints:
        "unidad": "C"
      }
      ```
-   - **Respuesta**: Código de estado `201 Created` si se envía con éxito.
+   - **Respuesta**: Código de estado `201 Created` si se envía con éxito.  
+
+4. **Actualizar Dato de Dispositivo**
+    - **Método**: `PUT`
+    - **URL**: `/datos_dispositivos/<int:id>`
+    - **Descripción**: Actualiza el dato cargado por un dispositivo existente en la base de datos.
+    - **Cuerpo de la Solicitud**:
+    ```json
+      
+      {
+        "dispositivo_id": 1,
+       "valor": 27.5,
+       "unidad": "C"
+      },
+      
+      ```
+    - **Respuesta**: Código de estado `204 No Content` si se crea con éxito.
+
+5. **Borrar Dato de Dispositivo**
+    - **Método**: `DELETE`
+    - **URL**: `/datos_dispositivos/<int:id>`
+    - **Descripción**: Elimina un dato cargado por un dispositivo existente en la base de datos.
+    - **Cuerpo de la Solicitud**:
+
+    - **Respuesta**: Código de estado `204 No Content` si se elimina el usuario con éxito.
 
 #### Configuraciones
 
