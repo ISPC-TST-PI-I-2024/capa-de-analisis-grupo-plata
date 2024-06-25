@@ -264,31 +264,68 @@ La API proporciona los siguientes endpoints:
 1. **Obtener Configuraciones**
    - **Método**: `GET`
    - **URL**: `/configuraciones/`
-   - **Descripción**: Devuelve una lista de las configuraciones del sistema.
+   - **Descripción**: Devuelve una lista de todas las configuraciones registradas.
    - **Respuesta**:
      ```json
      [
        {
-         "id": 1,
-         "nombre": "intervalo_muestreo",
+         "id_configuracion": 1,
+         "id_dispositivo": 1,
+         "parametro": "intervalo_muestreo",
          "valor": "10s"
        },
        ...
      ]
      ```
 
-2. **Actualizar Configuración**
-   - **Método**: `PUT`
-   - **URL**: `/configuraciones/{id}`
-   - **Descripción**: Actualiza una configuración específica.
-   - **Cuerpo de la Solicitud**:
+2. **Obtener Configuración**
+   - **Método**: `GET`
+   - **URL**: `/configuraciones/<int:id>`
+   - **Descripción**: Devuelve la configuración específica correspondiente al ID proporcionado.
+   - **Respuesta**:
      ```json
      {
-       "nombre": "intervalo_muestreo",
+       "id_configuracion": 1,
+       "id_dispositivo": 1,
+       "parametro": "intervalo_muestreo",
        "valor": "10s"
      }
      ```
-   - **Respuesta**: Código de estado `200 OK` si se actualiza con éxito.
+
+3. **Enviar Configuración**
+   - **Método**: `POST`
+   - **URL**: `/configuraciones/`
+   - **Descripción**: Envía una nueva configuración para un dispositivo.
+   - **Cuerpo de la Solicitud**:
+     ```json
+     {
+       "id_dispositivo": 1,
+       "parametro": "intervalo_muestreo",
+       "valor": "10s"
+     }
+     ```
+   - **Respuesta**: Código de estado `201 Created` si se envía con éxito.
+
+4. **Actualizar Configuración**
+    - **Método**: `PUT`
+    - **URL**: `/configuraciones/<int:id>`
+    - **Descripción**: Actualiza la configuración existente para el ID proporcionado.
+    - **Cuerpo de la Solicitud**:
+      ```json
+      {
+        "id_dispositivo": 1,
+        "parametro": "intervalo_muestreo",
+        "valor": "15s"
+      }
+      ```
+    - **Respuesta**: Código de estado `204 No Content` si se actualiza con éxito.
+
+5. **Borrar Configuración**
+    - **Método**: `DELETE`
+    - **URL**: `/configuraciones/<int:id>`
+    - **Descripción**: Elimina la configuración correspondiente al ID proporcionado.
+    - **Respuesta**: Código de estado `204 No Content` si se elimina con éxito.
+
 
 #### Proyectos
 
@@ -300,47 +337,144 @@ La API proporciona los siguientes endpoints:
      ```json
      [
        {
-         "id": 1,
-         "nombre": "Proyecto IoT",
-         "descripcion": "Proyecto para monitoreo de temperatura"
+         "id_proyecto": 1,
+         "nombre": "Proyecto Iot",
+         "descripcion": "Medicion de calidad del aire",
+         "id_usuario": 1,
+         "fecha_inicio": "2024-01-01",
+         "fecha_fin": "2024-12-31"
        },
        ...
      ]
      ```
 
-2. **Crear Proyecto**
+2. **Obtener Proyecto**
+   - **Método**: `GET`
+   - **URL**: `/proyectos/<int:id>`
+   - **Descripción**: Devuelve el proyecto específico correspondiente al ID proporcionado.
+   - **Respuesta**:
+     ```json
+     {
+        "id_proyecto": 1,
+        "nombre": "Proyecto Iot",
+        "descripcion": "Medicion de calidad del aire",
+        "id_usuario": 1,
+        "fecha_inicio": "2024-01-01",
+        "fecha_fin": "2024-12-31"
+     }
+     ```
+
+3. **Enviar Proyecto**
    - **Método**: `POST`
    - **URL**: `/proyectos/`
-   - **Descripción**: Crea un nuevo proyecto en la base de datos.
+   - **Descripción**: Envía un nuevo proyecto.
    - **Cuerpo de la Solicitud**:
      ```json
      {
        "nombre": "Proyecto IoT",
-       "descripcion": "Proyecto para monitoreo de temperatura"
+       "descripcion": "Medicion de calidad del aire",
+       "id_usuario": 1,
+       "fecha_inicio": "2024-01-01",
+       "fecha_fin": "2024-12-31"
      }
      ```
-   - **Respuesta**: Código de estado `201 Created` si se crea con éxito.
+   - **Respuesta**: Código de estado `201 Created` si se envía con éxito.
+
+4. **Actualizar Proyecto**
+    - **Método**: `PUT`
+    - **URL**: `/proyectos/<int:id>`
+    - **Descripción**: Actualiza el proyecto existente para el ID proporcionado.
+    - **Cuerpo de la Solicitud**:
+      ```json
+      {
+        "nombre": "Proyecto Iot ",
+        "descripcion": "Red de Alerta de Calidad del Aire",
+        "id_usuario": 1,
+        "fecha_inicio": "2024-01-01",
+        "fecha_fin": "2024-12-31"
+      }
+      ```
+    - **Respuesta**: Código de estado `204 No Content` si se actualiza con éxito.
+
+5. **Borrar Proyecto**
+    - **Método**: `DELETE`
+    - **URL**: `/proyectos/<int:id>`
+    - **Descripción**: Elimina el proyecto correspondiente al ID proporcionado.
+    - **Respuesta**: Código de estado `204 No Content` si se elimina con éxito.
 
 #### Seguridad
 
-1. **Obtener Información de Seguridad**
+1. **Obtener Informacion de Seguridad**
    - **Método**: `GET`
    - **URL**: `/seguridad/`
-   - **Descripción**: Devuelve la información de seguridad del sistema.
+   - **Descripción**: Devuelve una lista de todas las entradas de seguridad registradas.
+   - **Respuesta**:
+     ```json
+     [
+       {
+         "id_seguridad": 1,
+         "id_usuario": 1,
+         "id_dispositivo": 1,
+         "permisos": "admin"
+       },
+       ...
+     ]
+     ```
+
+2. **Obtener registro de Seguridad**
+   - **Método**: `GET`
+   - **URL**: `/seguridad/<int:id>`
+   - **Descripción**: Devuelve el registro de seguridad específico correspondiente al ID proporcionado.
    - **Respuesta**:
      ```json
      {
-       "seguridad_activa": true,
-       "ultimo_chequeo": "2024-06-24T00:00:00Z"
+       "id_seguridad": 1,
+       "id_usuario": 1,
+       "id_dispositivo": 1,
+       "permisos": "admin"
      }
      ```
+
+3. **Enviar Registro de Seguridad**
+   - **Método**: `POST`
+   - **URL**: `/seguridad/`
+   - **Descripción**: Envía una nueva entrada de seguridad para un dispositivo.
+   - **Cuerpo de la Solicitud**:
+     ```json
+     {
+       "id_usuario": 1,
+       "id_dispositivo": 1,
+       "permisos": "admin"
+     }
+     ```
+   - **Respuesta**: Código de estado `201 Created` si se envía con éxito.
+
+4. **Actualizar Registro de Seguridad**
+    - **Método**: `PUT`
+    - **URL**: `/seguridad/<int:id>`
+    - **Descripción**: Actualiza la entrada de seguridad existente para el ID proporcionado.
+    - **Cuerpo de la Solicitud**:
+      ```json
+      {
+        "id_usuario": 1,
+        "id_dispositivo": 1,
+        "permisos": "user"
+      }
+      ```
+    - **Respuesta**: Código de estado `204 No Content` si se actualiza con éxito.
+
+5. **Borrar Registro de Seguridad**
+    - **Método**: `DELETE`
+    - **URL**: `/seguridad/<int:id>`
+    - **Descripción**: Elimina la entrada de seguridad correspondiente al ID proporcionado.
+    - **Respuesta**: Código de estado `204 No Content` si se elimina con éxito.
 
 ### Autenticación
 
 Se requiere una clave de API para todas las solicitudes. La clave debe ser incluida en el encabezado `X-API-KEY`. Claves válidas incluyen `jade`, `opalo`, `rubi`, `topaz`, y `plata`.
 
 ```bash
-curl -H "X-API-KEY: jade" https://api.gonaiot.com/jade/usuarios/
+curl -H "X-API-KEY: jade" https://api.gonaiot.com/plata/usuarios/
 ```	
 
 ## Licencia
