@@ -1,44 +1,139 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/DNq-iHJ6)
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=15324281&assignment_repo_type=AssignmentRepo)
-# Proyecto IoT: API RESTful
 
 ![caratula_ISPC](./E%20assets/logoISPC.png)
 
----
+# Proyecto IoT: Capa de Análisis.
+## Instituto: ISPC.  
+**Carrera:** Tecnicatura Superior en Telecomunicaciones.  
+**Materia:** Proyecto Integrador I.  
+**Docente:** Cristian Gonzalo Vera.  
 
-## - **Institución**: Instituto Superior Politécnico Córdoba (ISPC)  
+## Grupo: PLATA
+<h1> Docente </h1>
+        <table align="center">
+          <thead>
+            <tr>
+              <th>Nombre y Apellido</th>
+              <th>Usuario en GitHub</th>
+              <th>GitHub</th>
+            </tr>
+          </thead>
+          <tbody>
+           <tr>
+              <td> Cristian Gonzalo Vera </td>
+              <td> Gona79 </td>
+              <td>
+                <a href="https://github.com/Gona79">
+                  <img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/>
+                </a>
+              </td>
+            </tr>
+        </table>
+  </dd>
+  <dd>
+<dl>
 
-## - **Curso**: Proyecto Integrador I  
+<br>
 
-## - **Docente**: Cristian Gonzalo Vera  
-
----
-
-## - **Equipo de Desarrollo [Grupo Plata]**:
-- karina jazmin barbero, GitHub: [@karina-lolis](https://github.com/karina-lolis).
-- Nicolás Nahuel Barrionuevo, GitHub: [@NicolasBa27](https://github.com/NicolasBa27).
-- Macarena Aylen Carballo, GitHub: [@MacarenaAC](https://github.com/MacarenaAC).
-- Diego Ares, GitHub: [@diegote7](https://github.com/diegote7).
-- Miqueas Drovetta, GitHub: [@aMiqueasDrovetta](https://github.com/MiqueasDrovetta).
-- Fernando Gimenez Coria, GitHub: [@FernandoGC](https://github.com/FerCbr). 
-- Agutin Leal Segura, GitHub: [@agustinlealsegura](https://github.com/agustinlealsegura).
-- Raul Jara, GitHub: [@r-j28](https://github.com/r-j28).
-
----
-
-**Datos del Proyecto:**  
-
-## **Proyecto ABP#23: Sistema de Alerta de Calidad del Aire**  
-
-## **Capa de Analisis**
-
----
+<h1> 👩‍💻👨🏼‍💻 Integrantes 👩‍💻👨🏼‍💻 </h1>
+        <table align="center">
+          <thead>
+            <tr>
+              <th>Nombre y Apellido</th>
+              <th>Usuario en GitHub</th>
+              <th>GitHub</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td> Leandro Roldan </td>
+              <td> pleroldan </td>
+              <td>
+                <a href="https://github.com/pleroldan">
+                  <img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td> Fernando Gimenez Coria </td>
+              <td> FerCbr </td>
+              <td>
+                <a href="https://github.com/FerCbr">
+                  <img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td> Karina jazmin barbero </td>
+              <td> karina-lolis </td>
+              <td>
+                <a href="https://github.com/karina-lolis">
+                  <img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td> Nicolás Nahuel Barrionuevo </td>
+              <td> NicolasBa27 </td>
+              <td>
+                <a href="https://github.com/NicolasBa27">
+                  <img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td> Macarena Aylen Carballo </td>
+              <td> MacarenaAC </td>
+              <td>
+                <a href="https://github.com/MacarenaAC">
+                  <img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/>
+                </a>
+              </td>
+            </tr>
+           <tr>
+              <td> Raul Jara </td>
+              <td> r-j28 </td>
+              <td>
+                <a href="https://github.com/r-j28">
+                  <img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/>
+                </a>
+              </td>
+            </tr>
+           <tr>
+              <td> Diego Ezequiel Ares </td>
+              <td>  diegote7 </td>
+              <td>
+                <a href="https://github.com/diegote7">
+                  <img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/>
+                </a>
+              </td>
+            </tr>
+           <tr>
+              <td> Romina Huk </td>
+              <td> RoHu17 </td>
+              <td>
+                <a href="https://github.com/RoHu17">
+                  <img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td> Paola Pantoja </td>
+              <td> - </td>
+              <td>
+                <a href="https://github.com/PaolaaPantoja">
+                  <img src="https://img.shields.io/badge/github-%23121011.svg?&style=for-the-badge&logo=github&logoColor=white"/>
+                </a>
+              </td>
+            </tr>
+        </table>
+  </dd>
+  <dd>
+<dl>
 
 ## Introducción
 
 Este proyecto proporciona una API RESTful para gestionar datos de un proyecto IoT utilizando Flask y MySQL. La API soporta operaciones CRUD para varias entidades como usuarios, dispositivos, proyectos, configuraciones, datos de dispositivos y seguridad.
 
----
 
 ## Modelo de Datos para IoT
 
@@ -190,7 +285,7 @@ El proyecto IoT sigue una metodología que integra el uso de dispositivos de bor
 Se requiere una clave de API para todas las solicitudes. La clave debe ser incluida en el encabezado `X-API-KEY`. Claves válidas incluyen `jade`, `opalo`, `rubi`, `topaz`, y `plata`.
 
 ```bash
-curl -H "X-API-KEY: jade" https://api.gonaiot.com/jade/usuarios/
+curl -H "X-API-KEY: plata" https://api.gonaiot.com/plata/usuarios/
 ```
 
 ### Licencia
