@@ -1,5 +1,5 @@
 
-![caratula_ISPC](./E%20assets/logoISPC.png)
+[![imagen-G-P-analisis.jpg](https://i.postimg.cc/7PRg69ZC/imagen-G-P-analisis.jpg)](https://postimg.cc/vDW12W9M)
 
 # Proyecto IoT: Capa de Análisis.
 ## Instituto: ISPC.  
